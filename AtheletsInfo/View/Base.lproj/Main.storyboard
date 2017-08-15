@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Pq-JU-Mh1">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Athletes-->
+        <scene sceneID="kxv-eV-VSp">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="w84-0b-qgZ" customClass="MainVC" customModule="AtheletsInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sWz-36-SAz"/>
+                        <viewControllerLayoutGuide type="bottom" id="GUr-jb-9fH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iAu-Yh-qHf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-3i-AZt">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BBy-3i-AZt" firstAttribute="top" secondItem="sWz-36-SAz" secondAttribute="bottom" id="OgN-rR-sMn"/>
+                            <constraint firstItem="GUr-jb-9fH" firstAttribute="top" secondItem="BBy-3i-AZt" secondAttribute="bottom" id="ecu-Fq-Fw8"/>
+                            <constraint firstItem="BBy-3i-AZt" firstAttribute="leading" secondItem="iAu-Yh-qHf" secondAttribute="leading" id="rFu-v9-RM9"/>
+                            <constraint firstAttribute="trailing" secondItem="BBy-3i-AZt" secondAttribute="trailing" id="u6e-vy-gvX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Athletes" id="jNj-jz-9l6"/>
+                    <connections>
+                        <outlet property="athletesTableView" destination="BBy-3i-AZt" id="VeT-2X-UqH"/>
+                        <segue destination="yck-Uq-KqN" kind="show" identifier="detailSegue" id="IOT-pX-Q6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sV7-Kd-Z2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="134"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="oEF-gk-vN2">
+            <objects>
+                <viewController id="yck-Uq-KqN" customClass="DetailsVC" customModule="AtheletsInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="njA-hh-H8X"/>
+                        <viewControllerLayoutGuide type="bottom" id="tSD-E3-Clh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1ku-44-bxt" customClass="DetailsView" customModule="AtheletsInfo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-9g-rka">
+                                <rect key="frame" x="110" y="72" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1LW-mJ-KBI">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="100" id="UW7-34-RPK">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwL-84-HGJ">
+                                <rect key="frame" x="80" y="180" width="160" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kNe-NC-Lg4">
+                                <rect key="frame" x="16" y="209.5" width="288" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kNe-NC-Lg4" firstAttribute="leading" secondItem="1ku-44-bxt" secondAttribute="leadingMargin" id="I64-Xz-Tud"/>
+                            <constraint firstItem="lwL-84-HGJ" firstAttribute="leading" secondItem="1ku-44-bxt" secondAttribute="leadingMargin" constant="64" id="LJq-ZQ-gCP"/>
+                            <constraint firstItem="kNe-NC-Lg4" firstAttribute="height" secondItem="1ku-44-bxt" secondAttribute="height" multiplier="1:1.6" id="MQd-Dr-LzQ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="lwL-84-HGJ" secondAttribute="trailing" constant="64" id="SOV-Mz-WBl"/>
+                            <constraint firstItem="kNe-NC-Lg4" firstAttribute="trailing" secondItem="1ku-44-bxt" secondAttribute="trailingMargin" id="SxS-qJ-W1H"/>
+                            <constraint firstItem="lwL-84-HGJ" firstAttribute="top" secondItem="rvs-9g-rka" secondAttribute="bottom" constant="8" id="dLh-Fh-RGM"/>
+                            <constraint firstItem="rvs-9g-rka" firstAttribute="centerX" secondItem="1ku-44-bxt" secondAttribute="centerX" id="nff-Dc-5qb"/>
+                            <constraint firstItem="rvs-9g-rka" firstAttribute="top" secondItem="njA-hh-H8X" secondAttribute="bottom" constant="8" id="vF5-DI-Oew"/>
+                            <constraint firstItem="kNe-NC-Lg4" firstAttribute="top" secondItem="lwL-84-HGJ" secondAttribute="bottom" constant="11.5" id="wuj-NW-XV0"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="athleteBrief" destination="kNe-NC-Lg4" id="6tx-1h-x1Y"/>
+                            <outlet property="athleteImage" destination="rvs-9g-rka" id="541-q7-PrG"/>
+                            <outlet property="athleteName" destination="lwL-84-HGJ" id="Ex5-7b-l9s"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="detailsView" destination="1ku-44-bxt" id="fvE-7D-eGu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDj-SY-7q7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LeX-LI-HGd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Pq-JU-Mh1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qQS-Q5-B9B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w84-0b-qgZ" kind="relationship" relationship="rootViewController" id="Cyg-M8-nrP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eot-ex-dU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.59999999999999" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>
